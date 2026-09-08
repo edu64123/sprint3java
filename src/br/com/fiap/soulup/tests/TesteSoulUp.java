@@ -13,7 +13,11 @@ public class TesteSoulUp {
 
     public static void main(String[] args) {
 
-        Usuario usuario = new Usuario("eduardo", "123456");
+        Usuario usuario = new Usuario(
+                "eduardo",
+                "123456"
+        );
+
         usuario.setId(10);
 
         usuario.adicionarPontos(500);
@@ -33,7 +37,9 @@ public class TesteSoulUp {
                 new BilheteUnico(usuario.getId());
 
         bilhete.setId(10);
+
         bilhete.adicionarSaldo(50);
+
         bilhete.adicionarPassagem();
 
         System.out.println(bilhete);
@@ -66,6 +72,11 @@ public class TesteSoulUp {
         PostagemDAO postagemDAO = new PostagemDAO();
         BilheteUnicoDAO bilheteDAO = new BilheteUnicoDAO();
         MissaoDAO missaoDAO = new MissaoDAO();
+
+        bilheteDAO.excluir(10);
+        postagemDAO.excluir(10);
+        usuarioDAO.excluir(10);
+        missaoDAO.excluir(10);
 
         usuarioDAO.cadastrar(usuario);
 
