@@ -16,7 +16,7 @@ public class ConnectionFactory {
 
         try {
 
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName("oracle.jdbc.OracleDriver");
 
             conexao = DriverManager.getConnection(
                     url,
